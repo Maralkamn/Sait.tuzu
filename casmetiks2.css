@@ -1,0 +1,110 @@
+/* Общий стиль для фона и текста */
+body {
+  background-image: url('фон касметика.webp');
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #4a4a4a;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+/* Стиль для заголовка */
+h2 {
+  font-size: 60px;
+  font-weight: bold;
+  color: #d59fb1; /* Пастельный розовый оттенок */
+  text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.15);
+  margin-top: 20px;
+  padding: 10px;
+  font-family: 'Georgia', serif;
+}
+
+/* Стиль для текста под заголовком */
+p {
+  font-size: 22px;
+  color: #4a4a4a;
+  background-color: rgba(255, 255, 255, 0.5); /* Полупрозрачный фон */
+  padding: 8px 20px;
+  display: inline-block;
+  border-radius: 8px;
+  margin-top: 5px;
+  font-style: italic;
+}
+
+/* Основной контейнер для моделей */
+.models-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 25px;
+}
+
+/* Карточка модели */
+.model {
+  position: relative;
+  margin: 15px;
+  width: 250px;
+  height: 300px;
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.model:hover {
+  transform: scale(1.03);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Видео внутри модели */
+.model video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Видео будет квадратным */
+  opacity: 1; /* Видео всегда видно */
+  pointer-events: none; /* Отключаем кликабельность */
+  transition: opacity 0.3s ease; /* Плавное появление */
+}
+
+/* Информация о модели */
+.model-info {
+  position: absolute;
+  bottom: 5px; /* Под видео */
+  width: 100%;
+  padding: 3px 8px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.7); /* Полупрозрачный фон для читаемости */
+  border-radius: 8px;
+  color: #dd6cbf; /* Темный цвет для текста */
+}
+
+.model-info h3 {
+  font-size: 16px; /* Уменьшаем размер шрифта для названия */
+  margin: 0;
+}
+
+/* Уменьшаем размер шрифта для цены */
+.model-info p {
+  font-size: 14px; /* Уменьшаем размер шрифта для цены */
+  margin-top: 3px;
+  background: none; /* Убираем фон */
+}
+
+/* Стиль для ссылок */
+a {
+  color: #d59fb1; /* Пастельный розовый цвет для ссылок */
+  text-decoration: none; /* Убираем подчеркивание */
+  font-weight: bold; /* Сделать ссылки жирными */
+  transition: color 0.3s ease, transform 0.3s ease; /* Плавное изменение цвета и масштаба */
+}
+
+a:hover {
+  color: #ffd700; /* Желтый цвет при наведении */
+  transform: scale(1.1); /* Увеличиваем ссылку при наведении */
+}
+
+a:focus {
+  outline: none; /* Убираем обводку при фокусировке */
+}
